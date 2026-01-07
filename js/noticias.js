@@ -1,52 +1,53 @@
 const dadosNoticias = [
     {
         id: 1,
-        titulo: "Projeto Via de Mão Dupla",
-        data: "07 de Maio de 2025",
-        categoria: "Educação",
+        titulo: "Consciência Negra: Branquitude e Antirracismo",
+        data: "12 de Novembro de 2025",
+        categoria: "Conscientização",
         fotos: [
-            "/assets/img/noticias/via-de-mao-dupla-1.jpg",
-            "/assets/img/noticias/via-de-mao-dupla-2.jpg",
-            "/assets/img/noticias/via-de-mao-dupla-3.jpg"
+            "/assets/img/noticias/consciencia-negra-1.jpg",
+            "/assets/img/noticias/consciencia-negra-2.jpg",
+            "/assets/img/noticias/consciencia-negra-3.jpg"
         ],
         autor: "Redação Vozes",
         tempo: "1 min de leitura",
-        resumo: "Educação ambiental e conscientização sobre os impactos da construção do Rodoanel na fauna e flora local.",
-        desc: "Recebemos os palestrantes Roberto, Daniel e Rodrigo para uma imersão sobre os impactos ecológicos do Rodoanel. A palestra 'Via de Mão Dupla' trouxe reflexões profundas sobre como grandes obras afetam o ecossistema. O ponto alto foi o contato direto com exemplares da fauna, proporcionando uma experiência educativa prática que reforçou a importância de protegermos nossa biodiversidade."
+        resumo: "Palestra com Klayson Ferreira promove debate essencial sobre branquitude e o papel do olhar crítico no antirracismo.",
+        desc: "No dia 12 de novembro, recebemos o psicólogo e capoeirista Klayson Ferreira para uma palestra transformadora em alusão à Consciência Negra. O debate trouxe à tona a urgência de discutirmos a branquitude e seu impacto estrutural na sociedade. Klayson reforçou que o antirracismo exige que a maioria volte o olhar para si mesma, analisando privilégios e desconstruindo preconceitos normalizados. Foi um momento fundamental de aprendizado para buscarmos, juntos, uma equidade real e efetiva."
     },
 
     {
         id: 2,
-        titulo: "Reflexão e Conscientização – Maio Laranja",
-        data: "21 de Maio de 2025",
-        categoria: "Conscientização",
+        titulo: "Setembro Amarelo: Cuidado e Saúde Mental",
+        data: "17 de Setembro de 2025",
+        categoria: "Saúde",
         fotos: [
-            "/assets/img/noticias/maio-laranja-1.jpg",
-            "/assets/img/noticias/maio-laranja-2.jpg",
-            "/assets/img/noticias/maio-laranja-3.jpg",
-            "/assets/img/noticias/maio-laranja-4.jpg"
+            "/assets/img/noticias/setembro-amarelo-1.jpg",
+            "/assets/img/noticias/setembro-amarelo-2.jpg",
+            "/assets/img/noticias/setembro-amarelo-3.jpg",
+            "/assets/img/noticias/setembro-amarelo-4.jpg"
         ],
         autor: "Redação Vozes",
         tempo: "1 min de leitura",
-        resumo: "Oficina especial de enfrentamento ao abuso infantil com dinâmica de capoeira e resgate histórico do Caso Araceli.",
-        desc: "Em apoio à campanha Maio Laranja, realizamos uma oficina sensível conduzida por Kleyson. Iniciamos com uma dinâmica de capoeira para criar um ambiente de acolhimento e leveza. Durante o encontro, relembramos o 'Caso Araceli' como um alerta necessário sobre a proteção de nossas crianças. Foi um momento de fortalecer nossa rede de proteção com muita empatia, seriedade e compromisso social."
+        resumo: "Palestra vital sobre valorização da vida, rede de apoio e a importância de ouvir e acolher o próximo.",
+        desc: "Recebemos Cristiane e Américo para um diálogo essencial sobre o Setembro Amarelo. Aprendemos que cuidar da saúde mental começa no reconhecimento dos nossos sentimentos e na escuta ativa do próximo. O encontro reforçou que ninguém precisa caminhar sozinho: fortalecer nossas redes de apoio e saber quando buscar ajuda (como o CVV 188) são atos de amor próprio e coletivo. Saúde mental importa todos os dias!"
     },
 
     {
         id: 3,
-        titulo: "Vivência no Canteiro de Obras do Rodoanel",
-        data: "28 de Maio de 2025",
-        categoria: "Experiência",
+        titulo: "PDI: Plano de Desenvolvimento Individual com Rodonaves",
+        data: "24 de Agosto de 2025",
+        categoria: "Carreira",
         fotos: [
-            "/assets/img/noticias/rodoanel-1.jpg",
-            "/assets/img/noticias/rodoanel-2.jpg",
-            "/assets/img/noticias/rodoanel-3.jpg",
-            "/assets/img/noticias/rodoanel-4.jpg"
+            
+            "/assets/img/noticias/rodonaves-1.jpg",
+            "/assets/img/noticias/rodonaves-2.jpg",
+            "/assets/img/noticias/rodonaves-3.jpg",
+            "/assets/img/noticias/rodonaves-3.jpg"
         ],
         autor: "Redação Vozes",
         tempo: "1 min de leitura",
-        resumo: "Equipe da ONG visita as obras do Rodoanel para uma imersão em engenharia e infraestrutura.",
-        desc: "Nossa equipe vivenciou um dia de aprendizado prático em um dos maiores canteiros de obras do estado. A visita técnica ao Rodoanel expandiu nosso repertório sobre engenharia e segurança, mas acima de tudo, reforçou nossa missão: preparar nossos jovens para sonhar alto e construir novos caminhos. Agradecemos aos profissionais que compartilharam conhecimento e inspiraram nosso time com tanta generosidade."
+        resumo: "Leonardo Goes, da Rodonaves, compartilha estratégias valiosas sobre crescimento pessoal e profissional através do PDI.",
+        desc: "Tivemos a honra de receber Leonardo Goes, analista de recursos humanos da empresa Rodonaves, para uma palestra inspiradora sobre o Plano de Desenvolvimento Individual (PDI). Foi um momento de muito aprendizado e troca de experiências, onde refletimos sobre como investir no nosso próprio crescimento. Leonardo nos motivou a olhar para o futuro com estratégia, reforçando que a evolução contínua é a chave para o sucesso profissional e pessoal. Gratidão por essa parceria transformadora!"
     },
 
     {
@@ -66,36 +67,56 @@ const dadosNoticias = [
 
     {
         id: 5,
-        titulo: "Setembro Amarelo: Cuidado e Saúde Mental",
-        data: "17 de Setembro de 2025",
-        categoria: "Saúde",
+        titulo: "Vivência no Canteiro de Obras do Rodoanel",
+        data: "28 de Maio de 2025",
+        categoria: "Experiência",
         fotos: [
-            "/assets/img/noticias/setembro-amarelo-1.jpg",
-            "/assets/img/noticias/setembro-amarelo-2.jpg",
-            "/assets/img/noticias/setembro-amarelo-3.jpg"
+            "/assets/img/noticias/rodoanel-1.jpg",
+            "/assets/img/noticias/rodoanel-2.jpg",
+            "/assets/img/noticias/rodoanel-3.jpg",
+            "/assets/img/noticias/rodoanel-4.jpg"
         ],
         autor: "Redação Vozes",
         tempo: "1 min de leitura",
-        resumo: "Palestra vital sobre valorização da vida, rede de apoio e a importância de ouvir e acolher o próximo.",
-        desc: "Recebemos Cristiane e Américo para um diálogo essencial sobre o Setembro Amarelo. Aprendemos que cuidar da saúde mental começa no reconhecimento dos nossos sentimentos e na escuta ativa do próximo. O encontro reforçou que ninguém precisa caminhar sozinho: fortalecer nossas redes de apoio e saber quando buscar ajuda (como o CVV 188) são atos de amor próprio e coletivo. Saúde mental importa todos os dias!"
+        resumo: "Equipe da ONG visita as obras do Rodoanel para uma imersão em engenharia e infraestrutura.",
+        desc: "Nossa equipe vivenciou um dia de aprendizado prático em um dos maiores canteiros de obras do estado. A visita técnica ao Rodoanel expandiu nosso repertório sobre engenharia e segurança, mas acima de tudo, reforçou nossa missão: preparar nossos jovens para sonhar alto e construir novos caminhos. Agradecemos aos profissionais que compartilharam conhecimento e inspiraram nosso time com tanta generosidade."
     },
 
     {
         id: 6,
-        titulo: "Consciência Negra: Branquitude e Antirracismo",
-        data: "12 de Novembro de 2025",
+        titulo: "Reflexão e Conscientização – Maio Laranja",
+        data: "21 de Maio de 2025",
         categoria: "Conscientização",
         fotos: [
-            "/assets/img/noticias/consciencia-negra-1.jpg",
-            "/assets/img/noticias/consciencia-negra-2.jpg",
-            "/assets/img/noticias/consciencia-negra-3.jpg"
+            "/assets/img/noticias/maio-laranja-1.jpg",
+            "/assets/img/noticias/maio-laranja-2.jpg",
+            "/assets/img/noticias/maio-laranja-3.jpg",
+            "/assets/img/noticias/maio-laranja-4.jpg"
         ],
         autor: "Redação Vozes",
         tempo: "1 min de leitura",
-        resumo: "Palestra com Klayson Ferreira promove debate essencial sobre branquitude e o papel do olhar crítico no antirracismo.",
-        desc: "No dia 12 de novembro, recebemos o psicólogo e capoeirista Klayson Ferreira para uma palestra transformadora em alusão à Consciência Negra. O debate trouxe à tona a urgência de discutirmos a branquitude e seu impacto estrutural na sociedade. Klayson reforçou que o antirracismo exige que a maioria volte o olhar para si mesma, analisando privilégios e desconstruindo preconceitos normalizados. Foi um momento fundamental de aprendizado para buscarmos, juntos, uma equidade real e efetiva."
-    }
+        resumo: "Oficina especial de enfrentamento ao abuso infantil com dinâmica de capoeira e resgate histórico do Caso Araceli.",
+        desc: "Em apoio à campanha Maio Laranja, realizamos uma oficina sensível conduzida por Kleyson. Iniciamos com uma dinâmica de capoeira para criar um ambiente de acolhimento e leveza. Durante o encontro, relembramos o 'Caso Araceli' como um alerta necessário sobre a proteção de nossas crianças. Foi um momento de fortalecer nossa rede de proteção com muita empatia, seriedade e compromisso social."
+    },
+
+    {
+        id: 7,
+        titulo: "Projeto Via de Mão Dupla",
+        data: "07 de Maio de 2025",
+        categoria: "Educação",
+        fotos: [
+            "/assets/img/noticias/via-de-mao-dupla-1.jpg",
+            "/assets/img/noticias/via-de-mao-dupla-2.jpg",
+            "/assets/img/noticias/via-de-mao-dupla-3.jpg"
+        ],
+        autor: "Redação Vozes",
+        tempo: "1 min de leitura",
+        resumo: "Educação ambiental e conscientização sobre os impactos da construção do Rodoanel na fauna e flora local.",
+        desc: "Recebemos os palestrantes Roberto, Daniel e Rodrigo para uma imersão sobre os impactos ecológicos do Rodoanel. A palestra 'Via de Mão Dupla' trouxe reflexões profundas sobre como grandes obras afetam o ecossistema. O ponto alto foi o contato direto com exemplares da fauna, proporcionando uma experiência educativa prática que reforçou a importância de protegermos nossa biodiversidade."
+    },
+    
 ];
+
 const ntWrapper = document.getElementById('noticiasScroll');
 const ntTarget = document.getElementById('modais-noticias-target');
 

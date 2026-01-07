@@ -7,7 +7,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     font-family: 'Poppins', sans-serif;
     background-color: #f4f7f9;
     overflow-x: hidden;
@@ -18,8 +19,9 @@ html, body {
 }
 
 section {
-    scroll-margin-top: 80px; 
+    scroll-margin-top: 80px;
 }
+
 /* SEÇÃO: CABEÇALHO E NAVEGAÇÃO */
 .cabecalho-principal {
     position: fixed;
@@ -327,7 +329,7 @@ section {
 
 /* SEÇÃO: COMO AJUDAR */
 .aj-secao-principal {
-    padding: 70px 8% 90px 8%; 
+    padding: 70px 8% 90px 8%;
     text-align: center;
     background-color: #f4f7f9;
     margin-top: 0;
@@ -646,7 +648,7 @@ section {
     width: 100%;
 }
 
-.footer.ft-main-area{
+.footer.ft-main-area {
     margin-bottom: 0 !important;
 }
 

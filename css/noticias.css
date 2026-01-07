@@ -1,4 +1,3 @@
-/* --- TÍTULO --- */
 .nt-titulo-container {
     padding: 60px 8% 0;
 }
@@ -77,12 +76,11 @@
     right: 2%;
 }
 
-/* --- CARD (Blindado e Alinhado) --- */
+
 .nt-card {
     min-width: 350px;
     max-width: 350px;
-    height: 480px;
-    /* Aumentado levemente para acomodar o alinhamento fixo */
+    height: 520px; 
     background: #fff;
     border-radius: 28px;
     overflow: hidden;
@@ -92,27 +90,29 @@
     display: flex;
     flex-direction: column;
     scroll-snap-align: start;
+    box-shadow: 0 10px 30px rgba(5, 0, 65, 0.05);
 }
 
 .nt-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(5, 0, 65, 0.1);
 }
 
 .nt-capa {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
     object-position: center;
     flex-shrink: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .nt-info {
     padding: 25px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
     flex-grow: 1;
-    /* Faz com que o conteúdo se distribua e o "Ler Mais" fique no fundo */
     justify-content: flex-start;
 }
 
@@ -126,45 +126,43 @@
     align-self: flex-start;
     text-transform: uppercase;
     margin-bottom: 5px;
-    display: inline-block;
 }
 
 .nt-info h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 800;
     color: #050041;
     line-height: 1.3;
-    /* Limita o título a 2 linhas para não empurrar o resto */
-    display: -webkit-box;
-    line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    min-height: 3.2rem;
-}
-
-.nt-resumo {
-    font-size: 14px;
-    color: #444;
-    line-height: 1.5;
-    /* Limita o resumo a 3 linhas */
     display: -webkit-box;
     line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    min-height: 4.5em;
-    /* Garante que todos os resumos ocupem o mesmo espaço */
+    min-height: 3.1rem; 
+    margin-bottom: 5px;
+}
+
+.nt-resumo {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    display: -webkit-box;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 4.8em; 
     margin-bottom: 15px;
 }
 
-/* Se tiver um link ou botão "Ler Mais" no final do card */
 .nt-ler-mais {
-    margin-top: auto;
-    /* Empurra o link para o final do card */
+    margin-top: auto; 
     font-weight: 700;
     color: #29acc7;
     font-size: 13px;
     text-transform: uppercase;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 /* --- MODAL --- */
@@ -316,7 +314,7 @@
     color: #050041;
 }
 
-/* --- MOBILE --- */
+
 @media (max-width: 768px) {
     .nt-seta {
         display: none;
