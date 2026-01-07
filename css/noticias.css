@@ -1,0 +1,351 @@
+/* --- TÍTULO --- */
+.nt-titulo-container {
+    padding: 60px 8% 0;
+}
+
+.nt-titulo-container h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #050041;
+    position: relative;
+    display: inline-block;
+}
+
+.nt-titulo-container h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 6px;
+    background: #29acc7;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+/* --- CARROSSEL --- */
+.nt-secao-carrossel {
+    padding: 20px 8% 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nt-noticias-wrapper {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.nt-noticias-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- SETAS LATERAIS --- */
+.nt-seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #29acc7;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    color: #29acc7;
+}
+
+.nt-seta:hover {
+    background: #29acc7;
+    color: #fff;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.nt-seta-esq {
+    left: 2%;
+}
+
+.nt-seta-dir {
+    right: 2%;
+}
+
+/* --- CARD (Blindado e Alinhado) --- */
+.nt-card {
+    min-width: 350px;
+    max-width: 350px;
+    height: 480px;
+    /* Aumentado levemente para acomodar o alinhamento fixo */
+    background: #fff;
+    border-radius: 28px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+}
+
+.nt-card:hover {
+    transform: translateY(-10px);
+}
+
+.nt-capa {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+}
+
+.nt-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+    /* Faz com que o conteúdo se distribua e o "Ler Mais" fique no fundo */
+    justify-content: flex-start;
+}
+
+.nt-tag {
+    background: rgba(41, 172, 199, 0.1);
+    color: #29acc7;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 800;
+    align-self: flex-start;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.nt-info h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #050041;
+    line-height: 1.3;
+    /* Limita o título a 2 linhas para não empurrar o resto */
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 3.2rem;
+}
+
+.nt-resumo {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+    /* Limita o resumo a 3 linhas */
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 4.5em;
+    /* Garante que todos os resumos ocupem o mesmo espaço */
+    margin-bottom: 15px;
+}
+
+/* Se tiver um link ou botão "Ler Mais" no final do card */
+.nt-ler-mais {
+    margin-top: auto;
+    /* Empurra o link para o final do card */
+    font-weight: 700;
+    color: #29acc7;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* --- MODAL --- */
+.nt-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 0, 65, 0.85);
+    display: none;
+    z-index: 10000;
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.nt-modal.active {
+    display: flex;
+}
+
+.nt-modal-inner {
+    width: 100%;
+    max-width: 850px;
+    max-height: 90vh;
+    background: #fff;
+    border-radius: 32px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.nt-fechar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 110;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nt-modal-hero {
+    height: 400px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    flex-shrink: 0;
+}
+
+.nt-modal-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.nt-modal-hero img.active {
+    opacity: 1;
+}
+
+.nt-seta-modal {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    color: #050041;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nt-modal-prev {
+    left: 20px;
+}
+
+.nt-modal-next {
+    right: 20px;
+}
+
+.nt-indicadores {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 15;
+}
+
+.nt-tracinho {
+    width: 20px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.nt-tracinho.ativo {
+    background: #29acc7;
+    width: 40px;
+}
+
+.nt-modal-body {
+    padding: 40px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.nt-modal-body::-webkit-scrollbar {
+    display: none;
+}
+
+.nt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    background: #f8f9fb;
+    padding: 20px;
+    border-radius: 16px;
+    margin: 20px 0;
+}
+
+.nt-grid strong {
+    display: block;
+    font-size: 10px;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.nt-grid span {
+    font-weight: 700;
+    color: #050041;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+    .nt-seta {
+        display: none;
+    }
+
+    .nt-card {
+        min-width: 350px;
+        max-width: 350px;
+        height: 480px;
+        background: #fff;
+        border-radius: 28px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1), box-shadow 0.8s ease;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        scroll-snap-align: start;
+    }
+
+    .nt-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nt-modal-hero {
+        height: 250px;
+    }
+
+    .nt-modal-body {
+        padding: 25px;
+    }
+}

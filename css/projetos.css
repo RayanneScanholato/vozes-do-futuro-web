@@ -1,0 +1,301 @@
+/* --- TÍTULO E ESTRUTURA --- */
+.pj-titulo-area {
+    padding: 60px 8% 0;
+}
+
+.pj-titulo-area h2 {
+    font-size: 2.5rem;
+    color: #050041;
+    font-weight: 800;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.pj-titulo-area h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 6px;
+    background: #29acc7;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+.pj-container-carrossel {
+    padding: 0 8% 80px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* --- CARROSSEL --- */
+.pj-wrapper-scroll {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* Esconde scroll no Firefox/IE */
+    scroll-behavior: smooth;
+    padding: 20px 0;
+}
+
+.pj-wrapper-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Esconde scroll no Chrome/Safari */
+
+.pj-seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    /* Borda azul de 2px para destaque total */
+    border: 2px solid #29acc7; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+    color: #29acc7; /* Ícone na mesma cor da borda */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pj-seta:hover {
+    background: #29acc7;
+    color: #fff;
+    transform: translateY(-50%) scale(1.05); /* Leve pulo ao passar o mouse */
+}
+
+.pj-seta-esq {
+    left: 2%;
+}
+
+.pj-seta-dir {
+    right: 2%;
+}
+
+/* --- CARDS --- */
+.pj-card-item {
+    width: 320px;
+    /* Largura exata e fixa */
+    height: 480px;
+    /* Altura exata e fixa */
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: 0.4s;
+    flex-shrink: 0;
+    /* Impede que o card seja esmagado pelo flexbox */
+}
+
+.pj-card-item:hover {
+    transform: translateY(-10px);
+}
+
+.pj-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* O segredo: preenche o card sem distorcer a foto */
+    object-position: center;
+    /* Garante que o centro da foto seja o foco */
+}
+
+.pj-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(5, 0, 65, 0.9) 10%, transparent 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    color: #fff;
+}
+
+/* --- MODAL (Sem barra de scroll visível) --- */
+.pj-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 0, 65, 0.85);
+    display: none;
+    z-index: 9999;
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.pj-modal-overlay.ativo {
+    display: flex;
+}
+
+.pj-modal-box {
+    width: 100%;
+    max-width: 850px;
+    max-height: 90vh;
+    background: #fff;
+    border-radius: 30px;
+    overflow-y: auto;
+    position: relative;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.pj-modal-box::-webkit-scrollbar {
+    display: none;
+}
+
+/* Chrome/Safari */
+
+.pj-fechar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Fotos internas do Modal */
+.pj-modal-hero {
+    width: 100%;
+    height: 400px;
+    /* Altura fixa para todas as fotos no modal */
+    position: relative;
+    background: #000;
+    overflow: hidden;
+}
+
+
+.pj-modal-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Mantém a foto bonita mesmo se for de proporção diferente */
+    position: absolute;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.pj-modal-hero img.active {
+    opacity: 1;
+}
+
+.pj-seta-modal {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.pj-prev {
+    left: 20px;
+}
+
+.pj-next {
+    right: 20px;
+}
+
+.pj-indicadores {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.pj-tracinho {
+    width: 20px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.pj-tracinho.ativo {
+    background: #29acc7;
+    width: 40px;
+}
+
+.pj-modal-text-content {
+    padding: 40px;
+}
+
+.pj-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.pj-info-item strong {
+    display: block;
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.pj-info-item span {
+    font-weight: 700;
+    color: #050041;
+}
+
+/* --- RESPONSIVIDADE MOBILE --- */
+@media (max-width: 768px) {
+    .pj-seta {
+        display: none !important;
+    }
+
+    /* Remove setas no mobile */
+    .pj-wrapper-scroll {
+        scroll-snap-type: x mandatory;
+        padding-left: 20px;
+    }
+
+   .pj-card-item {
+    width: 320px;
+    height: 480px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    /* APLICAÇÃO: Aumentado para 0.8s com curva de aceleração suave */
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1), box-shadow 0.8s ease;
+    flex-shrink: 0;
+}
+
+    .pj-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pj-modal-hero {
+        height: 250px;
+    }
+
+    .pj-modal-text-content {
+        padding: 25px;
+    }
+}
