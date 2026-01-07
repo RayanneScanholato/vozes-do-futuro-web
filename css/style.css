@@ -145,7 +145,7 @@ html, body {
     align-items: center;
     padding: 0 8%;
     background: linear-gradient(to right, rgba(5, 0, 65, 0.9) 10%, rgba(5, 0, 65, 0.2) 60%, transparent 100%),
-        url('/assets/img/hero.png') no-repeat center right;
+        url('/assets/img/logos/hero.png') no-repeat center right;
     background-size: cover;
 }
 
