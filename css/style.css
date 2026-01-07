@@ -14,8 +14,12 @@ html, body {
     max-width: 100%;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
+section {
+    scroll-margin-top: 80px; 
+}
 /* SEÇÃO: CABEÇALHO E NAVEGAÇÃO */
 .cabecalho-principal {
     position: fixed;
@@ -323,7 +327,7 @@ html, body {
 
 /* SEÇÃO: COMO AJUDAR */
 .aj-secao-principal {
-    padding: 20px 8% 90px 8%;
+    padding: 70px 8% 90px 8%; 
     text-align: center;
     background-color: #f4f7f9;
     margin-top: 0;
